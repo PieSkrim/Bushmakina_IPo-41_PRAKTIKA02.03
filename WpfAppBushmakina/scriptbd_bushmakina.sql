@@ -1,13 +1,9 @@
--- Drop database if exists
 DROP DATABASE IF EXISTS "Bushmakina";
 
--- Create database
 CREATE DATABASE "Bushmakina" WITH OWNER = postgres ENCODING = 'UTF8';
 
--- Connect to database
 \c "Bushmakina"
 
--- Create role app
 DO $$
 BEGIN
     IF NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname = 'app') THEN
@@ -18,11 +14,9 @@ BEGIN
 END
 $$;
 
--- Create schema
 DROP SCHEMA IF EXISTS app CASCADE;
 CREATE SCHEMA app AUTHORIZATION app;
 
--- Create tables
 CREATE TABLE app.partner_types_bushmakina (
     id SERIAL PRIMARY KEY,
     type_name VARCHAR(100) NOT NULL
@@ -49,15 +43,12 @@ CREATE TABLE app.sales_records_bushmakina (
     sale_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Create indexes
 CREATE INDEX idx_sales ON app.sales_records_bushmakina(partner_id);
 
--- Grant permissions
 GRANT ALL ON SCHEMA app TO app;
 GRANT ALL ON ALL TABLES IN SCHEMA app TO app;
 GRANT ALL ON ALL SEQUENCES IN SCHEMA app TO app;
 
--- Insert test data (ENGLISH ONLY - no encoding issues!)
 INSERT INTO app.partner_types_bushmakina (type_name) VALUES 
 ('Retail Store'),
 ('Wholesale Store'),
@@ -76,7 +67,6 @@ INSERT INTO app.sales_records_bushmakina (partner_id, product_name, quantity, sa
 (2, 'Commercial Linoleum', 60000, NOW()),
 (3, 'PVC Baseboard', 5000, NOW());
 
--- Verify data
 SELECT 'Partner Types: ' || COUNT(*) FROM app.partner_types_bushmakina;
 SELECT 'Partners: ' || COUNT(*) FROM app.partners_bushmakina;
 SELECT 'Sales Records: ' || COUNT(*) FROM app.sales_records_bushmakina;
