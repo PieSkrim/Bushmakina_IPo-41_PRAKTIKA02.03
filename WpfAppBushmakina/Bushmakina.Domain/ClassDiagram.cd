@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bushmakina.Domain.Calculators.BonusCalculator">
+    <Position X="1.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Calculators\BonusCalculator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bushmakina.Domain.Entities.PartnerEntity">
+    <Position X="8.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAACEAAAQAAAAIAAEmARAAIAAAAAA=</HashCode>
+      <FileName>Entities\PartnerEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bushmakina.Domain.Entities.PartnerTypeEntity">
+    <Position X="10.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\PartnerTypeEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bushmakina.Domain.Entities.SalesRecordEntity">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAgAEIAAg=</HashCode>
+      <FileName>Entities\SalesRecordEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bushmakina.Domain.Infrastructure.PartnersDbContext">
+    <Position X="7" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAEAABAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\PartnersDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bushmakina.Domain.Managers.PartnerDataManager">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAABAAEAABAACgACAAAAAgAAAAAAAAAAAE=</HashCode>
+      <FileName>Managers\PartnerDataManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Bushmakina.Domain.Managers.IPartnerManager">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAAAAAEAABAACgACAAAAAgAAAAAAAAAAAE=</HashCode>
+      <FileName>Managers\IPartnerManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
